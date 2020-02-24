@@ -217,9 +217,14 @@ angular.module("orsApp.route-service", []).factory("orsRouteService", [
       orsRouteService.data = data;
       let cnt = 0;
       for (let route of orsRouteService.data.features) {
+        // extract relevant time
+        if (data.metadata.query.departure) {
+          route.arrival = moment(route.properties.arrival);
+        } else if (data.metadata.query.arrival) {
+          route.departure = moment(route.properties.departure);
+        }
         //const geometry = orsUtilsService.decodePolyline(route.geometry, route.elevation);
         route.geometryRaw = angular.copy(route.geometry.coordinates);
-        let originalRoute = angular.copy(route);
         let coordinates = route.geometry.coordinates;
         // reverse order, needed as leaflet ISO 6709
         for (let i = 0; i < coordinates.length; i++) {

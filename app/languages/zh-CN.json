@@ -233,5 +233,7 @@
     "PACE_SPEED_INKMH": "Pace in km/h",
     "TIME_DEPART_AT": "Depart at",
     "TIME_LEAVE_NOW": "Leave now",
-    "TIME_ARRIVE_BY": "Arrive by"
+    "TIME_ARRIVE_BY": "Arrive by",
+    "ARRIVAL_ON": "Arrival on",
+    "DEPARTURE_ON": "Departure on"
 }
