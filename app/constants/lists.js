@@ -247,6 +247,10 @@ angular.module("orsApp").constant("lists", {
         preset: 0
       }
     },
+    time: {
+      value: true,
+      mode: "departure"
+    },
     borders: {
       all: {
         subgroups: ["Car", "HeavyVehicle"]
@@ -613,7 +617,9 @@ angular.module("orsApp").constant("lists", {
     all: "o1",
     controlled: "o2",
     country: "o3",
-    skip_segments: "s"
+    skip_segments: "s",
+    time_mode: "t1",
+    time_value: "t2"
   },
   reversePermalinkKeys: function(obj) {
     let rev = {};
